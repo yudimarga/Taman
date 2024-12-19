@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taklim Aanak Masjid Al-Anwar</title>
+    <!-- icons start -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta
+      name="google-site-verification"
+      content="Xdgo-IWAYCqIPObfHvrdUuqed7xgZqAit61ify3EzWg"
+    />
+
+    <!-- Feither Icons -->
+
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <section class="header">
+      <div class="judul">
+        <h1>Taman</h1>
+        <p>Taklim Anak Masjid Al-Anwar</p>
+      </div>
+      <div class="row">
+        <div class="photo-galery">
+          <div class="column">
+            <div class="photo">
+              <img src="img/about-1.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-2.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="photo">
+              <img src="img/about-4.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-5.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-6.jpg" alt="" />
+            </div>
+          </div>
+          <div class="column">
+            <div class="photo">
+              <img src="img/about-7.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-8.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="img/about-9.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="header">
+      <div class="judul">
+        <p>Indonesia Berkisah 2024</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="photo">
+            <img src="img/about-9.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form start -->
+
+    <div class="row-form" id="konsultasi">
+      <form name="elf-konsultasi-form" id="form-submit">
+        <h2>Form Pendaftaran</h2>
+        <p>Ayah dan Bunda mohon lengkapi data Ananda di Formulir ini</p>
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="Nama Anak" name="Nama Anak" />
+        </div>
+        <div class="input-group">
+          <i data-feather="users"></i>
+          <input type="text" placeholder="Nama Ortu" name="Nama Ortu" />
+        </div>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="Whatsapp" name="Whatsapp" />
+        </div>
+        <div class="input-group">
+          <i data-feather="home"></i>
+          <input type="text" placeholder="Asal Sekolah" name="Sekolah" />
+        </div>
+        <button type="submit" class="btn" id="btn-kirim">Daftar</button>
+      </form>
+    </div>
+
+    <!-- form end -->
+
+    <!-- Modal Send Form start -->
+    <div class="message" id="btn-loading">
+      <div class="message-container">
+        <a href="#" class="close"><i data-feather="x"></i></a>
+        <div class="message-content">
+          <img src="img/about-9.jpg" alt="event terbaru" />
+        </div>
+        <div class="layanan-content">
+          <h3>Alhamdulillah</h3>
+          <p>
+            Data Ananda sudah tersimpan, sampai jumpa di Taklim Masjid Al-Anwar
+          </p>
+          <div class="message-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(99)</span>
+          </div>
+          <p>
+            Kami Persilahkan bagi Ayah Bunda yang ingin ber Infaq secara
+            Transfer. Infaq ini akan kami gunakan untuk kebutuhan (Snack,
+            Makanan, Mainan dan Operasional) TAKLIM ANAK di waktu berikutnya
+          </p>
+          <div class="buttons">
+            <a
+              href="https://penuhberkah.net/campaign/taman-taklim-kids-masjid-al-anwar/donasi-sekarang"
+              target="_blank"
+              class="buy"
+              >Infaq Disini</a
+            >
+            <a
+              href="https://chat.whatsapp.com/Cuk2X7lgqCT61nSvmLE5Kf"
+              target="_blank"
+              class="cart"
+              >Gabung Group Whatsapp</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Send Form end -->
+
+    <!-- script Feither icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- form script -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxZyFEGjtPvCDuoADGSsGp-jnQMwYN558a645B3uS-33KlaAW7oof8HszKDYXE4iiDs/exec";
+      const form = document.forms["elf-konsultasi-form"];
+      const btnKirim = document.querySelector("#btn-kirim");
+      const btnLoading = document.querySelector("#btn-loading");
+
+      form.addEventListener("submit", (e) => {
+        btnLoading.style.display = "flex";
+        document.querySelector(".message .close").onclick = (e) => {
+          btnLoading.style.display = "none";
+        };
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
